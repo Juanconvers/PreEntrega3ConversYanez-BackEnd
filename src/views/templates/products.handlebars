@@ -1,0 +1,41 @@
+
+
+
+
+<div class="row">
+<h1>Productos para mostrar</h1>
+    {{#if mostrarProductos}}
+    {{#each productos}}
+
+    <div class="col">
+        <div class="card form-control" style="width: 18rem;">
+            <img src="{{this.thumbnail}}" alt="Imagen de {{this.title}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">Categoría: {{this.category}} </p>
+             -*   <p class="card-text">Descripción: {{this.description}} </p>
+                <p class="card-text">Estado: {{this.status}} </p>
+                <p class="card-text">En bodega: {{this.stock}} </p>
+                <p class="card-text">Código: {{this.code}} </p>
+                <p class="card-text">Precio: {{this.price}} </p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{!-- <div>
+    <p>Titulo: </p>
+    <p>Descripción: {{this.description}}</p>
+    <p>En bodega: {{this.stock}}</p>
+    <p>Código: {{this.code}}</p>
+    <p>Precio: {{this.price}}</p>
+    <img src="{{this.img}}" alt="Imagen de {{this.title}}">
+</div> --}}
+
+{{/each}}
+{{else}}
+<p>No se pueden mostrar los productos</p>
+{{/if}}

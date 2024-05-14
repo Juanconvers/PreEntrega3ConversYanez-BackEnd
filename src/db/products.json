@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Azucar",
+        "description": "La sonrisa",
+        "price": 5000,
+        "stock": 14,
+        "code": "A433",
+        "thumbnail": [],
+        "id": "ed278bf2d3ebbc8b5af6",
+        "img": "https://copservir.vtexassets.com/arquivos/ids/1164181-300-300?v=638414468949870000&width=300&height=300&aspect=true"
+    },
+    {
+        "title": "El Tutti Frutti",
+        "description": "Re-fresco",
+        "price": 200,
+        "stock": 18,
+        "code": "Y266",
+        "thumbnail": [],
+        "id": "e4cf5156ce4036c39d2c",
+        "img": "https://www.dittsvenskaskafferi.com/media/catalog/product/image/1673e5a3/fazer-tutti-frutti-sour-180g.jpg"
+    },
+    {
+        "title": "Carnes rojas",
+        "description": "Calidad superior",
+        "price": 32000,
+        "stock": 26,
+        "code": "L1253",
+        "thumbnail": [],
+        "id": "7f12a93176d27ae4b34c",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtNJxS52bc2x28vAAxJtSoUCXnbrY9vqyVM4iOztwk_KBmF-uOFuJa_9PCPYsfaj0NbIg&usqp=CAU"
+    }
+]
