@@ -1,8 +1,6 @@
 import cartModel from "../models/cart.js"
 import productModel from "../models/products.js"
 
-
-
 export const getCart = async (req, res) => {
     try {
         const cartId = req.params.cid
@@ -13,7 +11,6 @@ export const getCart = async (req, res) => {
     }
 }
 
-
 export const createCart = async (req, res) => {
     try {
         const mensaje = await cartModel.create({ products: [] })
@@ -22,8 +19,6 @@ export const createCart = async (req, res) => {
         res.status(500).send(`Error interno del servidor al crear carrito: ${error}`)
     }
 }
-
-
 
 export const insertProductCart = async (req, res) => {
     try {
@@ -49,6 +44,29 @@ export const insertProductCart = async (req, res) => {
         res.status(500).send(`Error interno del servidor al crear producto: ${error}`)
     }}
 
+export const createTicket = async (req, res) => {
+    try {
+    const cartId = req.params.cid
+    const cart = await cartModel.findById(cartId)
+    const prodSinStock = []
+    if (cart) {
+        cart.products.forEach(async (prod) => {
+            let producto = await productModel.findById(prod.id_prod)
+            if(producto.stock = prod.quantity < 0) {
+                prodSinStock.push(producto)
+            }
+        })
+        if (prodSinStock.length == 0) {
 
+            } else {
 
+            }
+        } else {
+            res.status(404).send("El carrito no existe")
+        }
 
+    } catch (e) {
+        res.status(500).send(e)
+    }
+
+}
